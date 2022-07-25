@@ -15,7 +15,7 @@ Use the following command to train a model
 --finetune is used to load pretrained model. Its certain layers are frozen, and rest of the network is trained on the shoe dataset. --cuda option is used to train on gpu. If you want to train on different gpu, change the gpu id in 'cuda:0' of line 69 to the required gpu id as 'cuda:gpu_id'.
 Explore the code and other parameters as well.
 
-After training, the predictions on test set are stored in test_{exp_name}.json file in the format of 'idx':[predictions, ground_truth]. 'idx' refers to an index of the dataset. To view predictions, follow the code in [a relative link] (test.ipynb)
+After training, the predictions on test set are stored in test_{exp_name}.json file in the format of 'idx':[predictions, ground_truth]. 'idx' refers to an index of the dataset. To view predictions, follow the code in [a relative link](test.ipynb)
 Try generating plots like the right hand side plots in slide number 16.
 
 
