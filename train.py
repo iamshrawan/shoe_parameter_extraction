@@ -85,7 +85,7 @@ if opt.mv:
     train_loader = DataLoader(dataset, sampler=sampler.SubsetRandomSampler(train_indices),
                             batch_size=opt.batch_size, drop_last=True)
     dev_loader = DataLoader(dataset, sampler=sampler.SubsetRandomSampler(dev_indices),
-                            batch_size=1)
+                            batch_size=2)
     test_loader = DataLoader(dataset, sampler=sampler.SubsetRandomSampler(test_indices),
                             batch_size=1)
     if single_view:

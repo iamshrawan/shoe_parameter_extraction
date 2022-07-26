@@ -108,6 +108,8 @@ def validate(val_loader, model, criterion, device, mv=False):
 def save_checkpoint(state, save_losses, avg_losses, exp='Dataset500'):
     if not os.path.exists("checkpoint"):
         os.mkdir("checkpoint")
+    if not os.path.exists("metrics"):
+        os.mkdir("metrics")
     if not os.path.exists(os.path.join("checkpoint", exp)):
         os.mkdir(os.path.join("checkpoint", exp))
    
@@ -118,12 +120,11 @@ def save_checkpoint(state, save_losses, avg_losses, exp='Dataset500'):
 
     if save_losses:
         print("Saving Dev loss values")
-    mse = {
-        'Dev MSE' : avg_losses
-    }
-    with open('metrics/eval_metrics_' + exp + '.json', 'w') as e:
-        json.dump(mse, e)
-
+        mse = {
+            'Dev MSE' : avg_losses
+        }
+        with open('metrics/eval_metrics_' + exp + '.json', 'w') as e:
+            json.dump(mse, e)
 
 
 
